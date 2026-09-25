@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Arjun S Nair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="about-page">
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+  <div class="about-container">
+    <header class="top-nav">
+      <a href="index.html" class="back-link">
+        <span class="arrow">←</span> Home
+      </a>
+      <div class="role-title">UI/UX Designer</div>
+      <div class="placeholder"></div>
+    </header>
+
+    <main class="about-content">
+      <h1 class="page-title">About</h1>
+
+      <section class="bio-section" id="bio-container">
+        <p id="bio-paragraph">I'm a UI/UX and visual designer with an engineering mindset, focused on turning complex
+          problems into simple, meaningful experiences. Engineering taught me to think systematically; design taught me
+          to make that logic intuitive and human. I work across UI/UX, branding and digital products, creating
+          experiences that are clear, useful and distinctive. My process combines research, iteration, feedback and
+          thoughtful problem-solving. I'm constantly learning, experimenting and refining my craft one interface,
+          identity and idea at a time. I don't just design screens. I design clearer ways to understand, interact and
+          connect.</p>
+      </section>
+
+      <section class="quote-section">
+        <div class="quote-icon">“</div>
+        <p class="quote-text">Working with Arjun on our company logo was a great experience. He understood our brand and
+          vision, welcomed feedback, and refined every detail thoughtfully. The final identity was clean, distinctive
+          and exactly what we needed. I highly recommend Arjun for branding and design.</p>
+        <div class="quote-author">
+          <span class="name">Anand S</span>
+          <span class="company">FERAURA Private Limited</span>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="timeline-item">
+          <div class="timeline-date">July 2026</div>
+          <div class="timeline-role">
+            <div class="role">UI/UX Designer Intern</div>
+            <div class="org">SCALGO TECHNOLOGIES PVT LTD</div>
+          </div>
+          <div class="timeline-desc">UI/UX Designer Intern at Scalgo Technologies, contributing to user research,
+            wireframing, prototyping, UI design, and usability improvements. Collaborate with product and development
+            teams to create intuitive, responsive, and user-centered digital experiences while gaining hands-on
+            experience in AI-driven products and design systems.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Nov 2021 - present</div>
+          <div class="timeline-role">
+            <div class="role">Information Technology Engineering Student</div>
+            <div class="org">Government Engineering College, Barton Hill</div>
+          </div>
+          <div class="timeline-desc">Pursuing Information Technology Engineering at Government Engineering College
+            Barton Hill, building a strong foundation in programming, software systems, databases, networks, and
+            problem-solving. Alongside engineering, I have developed my skills in UI/UX, visual design, branding, and
+            digital product design, combining technical thinking with creativity to create intuitive and meaningful user
+            experiences.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Nov 2025 - Feb 2026</div>
+          <div class="timeline-role">
+            <div class="role">UI/UX Designer Intern</div>
+            <div class="org">Marvellous UI/UX Design Studio</div>
+          </div>
+          <div class="timeline-desc">Worked as a UI/UX Designer Intern, designing user-centered digital experiences
+            through research, wireframing, prototyping, and visual design. Developed user flows, responsive interfaces,
+            and interactive prototypes while applying usability principles, design systems, and feedback-driven
+            iteration to create clear and engaging digital products.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2025 - Nov 2026</div>
+          <div class="timeline-role">
+            <div class="role">UI/UX Design Diploma Student</div>
+            <div class="org">Marvellous UI/UX Design Academy</div>
+          </div>
+          <div class="timeline-desc">Completed a Diploma in UI/UX Design at Marvellous UI/UX Design Academy, with
+            hands-on training in user research, UX strategy, information architecture, wireframing, prototyping,
+            interaction design, usability testing, and visual design. Developed practical projects from research and
+            ideation through to high-fidelity interfaces and design systems, focusing on creating clear, intuitive, and
+            human-centered digital experiences.</div>
+        </div>
+      </section>
+
+      <footer class="about-footer">
+        <div class="footer-col">
+          <div class="footer-label">Email</div>
+          <a href="mailto:arjun.s.nair.info@gmail.com" class="footer-value">arjun.s.nair.info@gmail.com</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Phone</div>
+          <div class="footer-value">(+91) 7306158594</div>
+        </div>
+        <div class="footer-col right-align">
+          <a href="#" class="footer-value">LinkedIn</a>
+          <a href="#" class="footer-value">Instagram</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Gentle page load transition from bottom to top
+      gsap.from(".about-container", {
+        y: 40,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        clearProps: "all"
+      });
+
+      // Split the text into words
+      const split = new SplitType('#bio-paragraph', { types: 'words', tagName: 'span' });
+
+      // Apply the GSAP text reveal scroll effect
+      gsap.from(split.words, {
+        opacity: 0.30,
+        stagger: 2,
+        duration: 2,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#bio-container',
+          start: 'top 40%',
+          end: 'bottom 40%',
+          scrub: true,
+          // Removed pin as it can break normal scroll flow, but scrub will smoothly reveal words
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

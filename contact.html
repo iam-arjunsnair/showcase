@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Arjun S Nair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-page">
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+  <div class="contact-container">
+    <header class="top-nav">
+      <a href="index.html" class="back-link">
+        <span class="arrow">←</span> Home
+      </a>
+      <div class="role-title">UI/UX Designer</div>
+      <div class="placeholder"></div>
+    </header>
+
+    <main class="contact-content">
+      <div class="contact-left">
+        <h1 class="contact-heading">If you prefer not to fill out forms, feel free to email me directly and lets talk about the next big thing!</h1>
+        
+        <div class="contact-info">
+          <div class="info-block">
+            <div class="info-label">Phone</div>
+            <div class="info-value">(+91) 7306158894</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label">Email</div>
+            <div class="info-value">arjun.s.nair.info@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" action="https://formsubmit.co/arjun.s.nair.info@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Contact Request from Portfolio">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-group">
+            <label>Full name</label>
+            <input type="text" name="name" placeholder="ex. John Savior" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="hello@website.com" required>
+          </div>
+          <div class="form-group">
+            <label>Share More Details</label>
+            <textarea name="message" placeholder="About your project..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn" aria-label="Submit form">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="about-footer">
+        <div class="footer-col">
+          <div class="footer-label">Email</div>
+          <a href="mailto:arjun.s.nair.info@gmail.com" class="footer-value">arjun.s.nair.info@gmail.com</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-label">Phone</div>
+          <div class="footer-value">(+91) 7306158894</div>
+        </div>
+        <div class="footer-col right-align">
+          <a href="#" class="footer-value">LinkedIn</a>
+          <a href="#" class="footer-value">Instagram</a>
+        </div>
+    </footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".contact-container", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        clearProps: "all"
+      });
+    });
+  </script>
+</body>
+</html>
