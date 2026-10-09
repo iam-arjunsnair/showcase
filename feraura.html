@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feraura Branding — Arjun S Nair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-details-page">
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+  
+  <div class="project-container">
+    <header class="top-nav">
+      <a href="portfolio.html" class="back-link">
+        <span class="arrow">←</span> Home
+      </a>
+      <div class="role-title">UI/UX Designer</div>
+      <div class="placeholder"></div>
+    </header>
+
+    <main class="project-content">
+      <h1 class="project-title">Branding</h1>
+      <p class="project-intro">
+        Feraura Private Limited is a deep-tech medical visualization startup focused on combining technology, precision, and healthcare to create clearer ways of understanding complex medical information.
+      </p>
+
+      <div class="project-section">
+        <div class="project-image-wrapper">
+            <img src="assets/feraura-mockup1.jpg" alt="Feraura Business Cards" class="project-image" onerror="this.src='https://placehold.co/1200x800/1E3A3A/FFF?text=Feraura+Mockup+1'">
+        </div>
+        <p class="project-text">
+          Feraura Private Limited is a deep-tech medical visualization startup focused on combining healthcare, technology, and precision to create clearer ways of understanding complex medical information. The objective of this project was to develop a distinctive visual identity that could communicate Feraura's technological expertise while maintaining the trust, clarity, and reliability associated with the healthcare industry. The identity needed to position Feraura as a forward-thinking technology company while remaining professional, accessible, and adaptable across different brand applications.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <div class="project-image-wrapper">
+            <img src="assets/feraura-mockup2.jpg" alt="Feraura Business Cards Angle 2" class="project-image" onerror="this.src='https://placehold.co/1200x800/1E3A3A/FFF?text=Feraura+Mockup+2'">
+        </div>
+        <p class="project-text">
+          The core challenge was to visually connect healthcare and medical technology with innovation, precision, accuracy, and reliability without relying on conventional medical symbols. I explored multiple conceptual and geometric directions to find a visual language that felt modern, distinctive, and ownable. The final concept was developed through a controlled relationship between curves, proportions, negative space, and structural alignment. Every element was refined with scalability and consistency in mind, allowing the logo to function effectively across digital interfaces, applications, presentations, documents, marketing materials, and future brand touchpoints.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <div class="project-image-wrapper">
+            <img src="assets/feraura-mockup3.jpg" alt="Feraura MR Room Branding" class="project-image" onerror="this.src='https://placehold.co/1200x800/222/FFF?text=Feraura+Mockup+3'">
+        </div>
+        <p class="project-text">
+          The final identity establishes Feraura as a modern, technology-driven healthcare brand with a visual language centered around precision and clarity. Its geometric construction, balanced proportions, and contemporary styling create a strong foundation for consistent brand communication. More than simply identifying the company, the logo is designed to support Feraura's long-term growth and recognition within the deep-tech medical visualization space, providing a flexible identity that can evolve alongside the company and its future innovations.
+        </p>
+      </div>
+
+      <div class="next-project-container">
+        <a href="https://www.behance.net/gallery/242641267/HRM-%28-Mobile-Application-%29" class="next-project-btn" target="_blank" rel="noopener noreferrer">
+          <div class="next-project-thumbnail">
+            <img src="assets/hrm-thumbnail.jpg" alt="HRM Mobile App" onerror="this.src='https://placehold.co/300x180/1a1a1a/fff?text=HRM'">
+          </div>
+          <div class="next-project-info">
+            <span class="next-project-name">HRM Mobile App</span>
+            <span class="next-project-arrow">Next →</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="about-footer">
+      <div class="footer-col">
+        <div class="footer-label">Email</div>
+        <a href="mailto:arjun.s.nair.info@gmail.com" class="footer-value">arjun.s.nair.info@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-label">Phone</div>
+        <div class="footer-value">(+91) 7306158894</div>
+      </div>
+      <div class="footer-col right-align">
+        <a href="https://www.linkedin.com/in/arjunsnair-?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          target="_blank" class="footer-value">LinkedIn</a>
+        <a href="https://www.behance.net/arjunsnair-/projects" target="_blank" rel="noopener noreferrer"
+          class="footer-value">Behance</a>
+        <a href="https://www.instagram.com/mr_ar.jx_.n?stkn=MWhocmN0OXJmdHp5OQ==" target="_blank"
+          class="footer-value">Instagram</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.from(".project-container", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        clearProps: "all"
+      });
+      
+      const sections = document.querySelectorAll('.project-section');
+      sections.forEach((section, index) => {
+        gsap.from(section, {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            delay: 0.2 + (index * 0.15),
+            ease: "power3.out"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
